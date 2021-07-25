@@ -11,7 +11,7 @@ variable "kube_config_context_cluster" {
 }
 
 variable "app_name" {
-  default = "HelloWorld"
+  default = "hello-world"
   description = "Prefix for everything, subdomain, etc..."
 }
 
