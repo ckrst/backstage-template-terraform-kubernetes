@@ -1,5 +1,13 @@
 # {{cookiecutter.name}}
 
+terraform {
+  backend "kubernetes" {
+    secret_suffix = "${var.app_name}-state"
+    load_config_file = true
+    config_path = var.kube_config_path
+  }
+}
+
 provider "kubernetes" {
   config_path = var.kube_config_path
   config_context = var.kube_config_context
